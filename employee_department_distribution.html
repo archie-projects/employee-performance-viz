@@ -45,6 +45,8 @@
 
   <h3>Verification Email: 23f2001159@ds.study.iitm.ac.in</h3>
 
+  <h3>Frequency count for Marketing department: 14</h3>
+
   <h4>Python Code Used:</h4>
   <pre><code>
 import pandas as pd
@@ -77,6 +79,9 @@ html_str = mpld3.fig_to_html(plt.gcf())
 
 # Embed email
 html_str += "<h3>Verification Email: 23f2001159@ds.study.iitm.ac.in</h3>"
+
+# Also embed result
+html_str += "<h3>Frequency count for Marketing department: {} </h3>".format(marketing_count)
 
 # Save final file
 with open("employee_department_distribution.html", "w") as f:
