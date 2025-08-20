@@ -14,7 +14,6 @@
   <!-- Interactive Matplotlib figure -->
   <div id="fig_el"></div>
   <script type="text/javascript">
-    // mpld3 figure JSON
     mpld3.draw_figure("fig_el", {
       "width": 640.0,
       "height": 480.0,
@@ -35,8 +34,8 @@
           "x": [0, 1, 2, 3, 4],
           "y": [20, 20, 20, 20, 20],
           "facecolors": ["#440154", "#31688e", "#35b779", "#fde725", "#ff7f0e"],
-          "edgecolors": ["#000000"] * 5,
-          "linewidths": [1] * 5
+          "edgecolors": ["#000000", "#000000", "#000000", "#000000", "#000000"],
+          "linewidths": [1, 1, 1, 1, 1]
         }],
         "texts": []
       }],
@@ -77,7 +76,7 @@ plt.ylabel('Count')
 html_str = mpld3.fig_to_html(plt.gcf())
 
 # Embed email
-html_str += "&lt;h3&gt;Verification Email: 23f2001159@ds.study.iitm.ac.in&lt;/h3&gt;"
+html_str += "<h3>Verification Email: 23f2001159@ds.study.iitm.ac.in</h3>"
 
 # Save final file
 with open("employee_department_distribution.html", "w") as f:
