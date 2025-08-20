@@ -46,11 +46,16 @@ plt.tight_layout()
 # -------------------------
 # 4. Save plot as interactive HTML
 # -------------------------
+# -------------------------
+# 4. Save plot as interactive HTML
+# -------------------------
 html_str = mpld3.fig_to_html(plt.gcf())
+
+# Add your email address into the HTML (for verification)
+html_str += "<p>Verification Email: 23f2001159@ds.study.iitm.ac.in</p>"
+
 with open("employee_department_distribution.html", "w") as f:
     f.write(html_str)
 
 print("Visualization saved as employee_department_distribution.html")
 
-# Verification email
-print("Verification Email: 23f2001159@ds.study.iitm.ac.in")
